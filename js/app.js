@@ -15,6 +15,11 @@ const cardDeck = document.querySelector(".deck");
 let openCards = [];
 let matchedCards = [];
 
+//Timer variables
+
+let second = 0, minute = 0, hour = 0;
+let timer = document.querySelector(".timer");
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -45,6 +50,13 @@ function startGame(){
     // Adds a click event to each card
     click(card);
   }
+
+  // Reset Timer
+  second = 0;
+  minute = 0;
+  hour = 0;
+  timer.innerHTML = "0 mins 0 secs";
+  clearInterval(ticker);
 }
 
 // Card being clicked event
@@ -118,6 +130,13 @@ function addMoves() {
   moves++;
   movesContainer.innerHTML = moves;
 
+  //Starts timer on the first moves
+  if (moves === 1) {
+    second = 0;
+    minute = 0;
+    hour = 0;
+    startTimer();
+  }
   //Checks and sets the rating
   rating();
 }
@@ -148,12 +167,9 @@ function rating () {
 
 //Timer
 
-let second = 0, minute = 0, hour = 0;
-let timer = document.querySelector(".timer")
-
 function startTimer(){
-  interval = setInterval(function(){
-    timer.innerHTML = minute + "Mins " + second + "Secs ";
+  ticker = setInterval(function(){
+    timer.innerHTML = minute + " mins " + second + " secs ";
     second++;
     if(second == 60) {
       minute++;
@@ -164,8 +180,11 @@ function startTimer(){
       minute = 0;
     }
   }, 1000);
-}
+};
 
+function stopTimer(){
+  clearInterval(ticker);
+};
 
 // Reset button
 const resetButton = document.querySelector(".restart");
@@ -181,6 +200,12 @@ resetButton.addEventListener("click", function() {
   moves = 0;
   movesContainer.innerHTML = moves;
   starsContainer.innerHTML = star + star + star;
+
+  //Reset timer
+  timer.innerHTML = "0 mins 0 secs";
+  stopTimer();
+
+
 });
 
 //Starts the game the first time
