@@ -135,7 +135,7 @@ h1 {
    bottom: 0;
    left: 0;
    right: 0;
-   background: #fff;
+   background: rgba(0, 0, 0, 0.7);
    transition: opacity 500ms;
    visibility: hidden;
    opacity: 0;
@@ -151,7 +151,7 @@ h1 {
   padding: 20px;
   background: #fff;
   border-radius: 5px;
-  width: 85%;
+  width: 65%;
   position: relative;
   transition: all 5s ease-in-out;
   font-family: "Open Sans", sans-serif;
@@ -161,12 +161,15 @@ h2 {
   margin-top: 0;
   color: #000;
   font-family: "Open Sans", sans-serif;
+  text-align: center;
 }
 
 p {
   max-height: 30%;
   overflow: auto;
   text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
 }
 
 .show {
@@ -180,8 +183,9 @@ p {
   font-size: 1rem;
   display: block;
   margin: 0 auto;
-  width: 50%;
+  width: 40%;
   font-family: "Open Sans", sans-serif;
+  font-weight: 400;
   color: #fff;
   border-radius: 5px;
 }

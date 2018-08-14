@@ -153,15 +153,15 @@ starsContainer.innerHTML = star + star + star;
 
 function rating () {
   switch(moves) {
-    case 10:
+    case 15:
       starsContainer.innerHTML = star + star + star;
     break;
 
-    case 15:
+    case 20:
       starsContainer.innerHTML = star + star;
     break;
 
-    case 20:
+    case 25:
       starsContainer.innerHTML = star;
     break;
   }
@@ -246,7 +246,6 @@ function playAgain(){
   //Reset timer
   timer.innerHTML = "00:00:00";
   stopTimer();
-
 };
 
 
