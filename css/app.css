@@ -103,7 +103,7 @@ h1 {
   width: 50%;
 }
 
-.stars {
+.starContainer {
   width: 50%;
 }
 
@@ -114,13 +114,9 @@ h1 {
 .score-panel .stars {
     margin: 0;
     padding: 0;
-    display: inline-block;
     margin: 0 5px 0 0;
-}
-
-.score-panel .stars li {
-    list-style: none;
-    display: inline-block;
+    color: #FEC923;
+    text-align: center;
 }
 
 .score-panel .restart {

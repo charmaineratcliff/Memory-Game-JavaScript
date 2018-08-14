@@ -145,7 +145,7 @@ function addMoves() {
 // Rating
 const starsContainer = document.querySelector(".stars");
 
-const star = `<li><i class="fa fa-star"></i></li>`;
+const star = `<i class="fa fa-star"></i>`;
 
 starsContainer.innerHTML = star + star + star;
 
