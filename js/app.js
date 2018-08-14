@@ -55,7 +55,7 @@ function startGame(){
   second = 0;
   minute = 0;
   hour = 0;
-  timer.innerHTML = "0 mins 0 secs";
+  timer.innerHTML = "00:00:00";
   clearInterval(ticker);
 }
 
@@ -103,12 +103,12 @@ function compare(currentCard, previousCard) {
 
   } else {
 
-    // Let's the cards wait 350 ms before doing this
+    // Let's the cards wait 500 ms before doing this
     setTimeout(function() {
       currentCard.classList.remove("open", "show", "disable");
       previousCard.classList.remove("open", "show", "disable");
       openCards = [];
-    }, 350);
+    }, 500);
   }
 
   //Adds a move
@@ -170,7 +170,7 @@ function rating () {
 
 function startTimer(){
   ticker = setInterval(function(){
-    timer.innerHTML = minute + " mins " + second + " secs ";
+    timer.innerHTML = hour + ":" + minute + ":" + second;
     second++;
     if(second == 60) {
       minute++;
@@ -203,7 +203,7 @@ resetButton.addEventListener("click", function() {
   starsContainer.innerHTML = star + star + star;
 
   //Reset timer
-  timer.innerHTML = "0 mins 0 secs";
+  timer.innerHTML = "00:00:00";
   stopTimer();
 
 });

@@ -29,8 +29,8 @@ body {
 
 h1 {
     font-family: 'Open Sans'; sans-serif;
-    font-weight: 300;
-    font-size: 3rem;
+    font-weight: 400;
+    font-size: 3.5rem;
     margin: 1rem;
 }
 
@@ -90,31 +90,32 @@ h1 {
 
 .score-panel {
     text-align: center;
-    width: 345px;
+    width: 680px;
     flex-wrap: wrap;
     display: flex;
 }
 
-.movesContainer {
+.movesContainer, .timer {
   width: 50%;
-}
-
-.timer {
-  width: 50%;
+  font-family: 'Open Sans'; sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
 }
 
 .starContainer {
   width: 50%;
+  font-size: 2rem;
 }
 
 .restart {
   width: 50%;
+  font-size: 2rem;
 }
 
 .score-panel .stars {
     margin: 0;
     padding: 0;
-    margin: 0 5px 0 0;
+    margin: 0 0 0 0;
     color: #FEC923;
     text-align: center;
 }
