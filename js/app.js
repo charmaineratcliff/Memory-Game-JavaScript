@@ -1,13 +1,13 @@
 // List to hold all of the cards
 
 const cards = ['fa fa-apple', 'fa fa-apple',
-'fa fa-anchor', 'fa fa-anchor',
-'fa fa-bicycle', 'fa fa-bicycle',
-'fa fa-bolt', 'fa fa-bolt',
-'fa fa-bomb', 'fa fa-bomb',
-'fa fa-diamond', 'fa fa-diamond',
-'fa fa-leaf', 'fa fa-leaf',
-'fa fa-paper-plane-o', 'fa fa-paper-plane-o',
+'fa fa-bluetooth-b', 'fa fa-bluetooth-b',
+'fa fa-copy', 'fa fa-copy',
+'fa fa-wifi', 'fa fa-wifi',
+'fa fa-save', 'fa fa-save',
+'fa fa-android', 'fa fa-android',
+'fa fa-gamepad', 'fa fa-gamepad',
+'fa fa-power-off', 'fa fa-power-off',
 ];
 
 const cardDeck = document.querySelector(".deck");
@@ -204,7 +204,6 @@ resetButton.addEventListener("click", function() {
   //Reset timer
   timer.innerHTML = "0 mins 0 secs";
   stopTimer();
-
 
 });
 
