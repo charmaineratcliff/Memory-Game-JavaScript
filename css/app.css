@@ -30,6 +30,8 @@ body {
 h1 {
     font-family: 'Open Sans'; sans-serif;
     font-weight: 300;
+    font-size: 3rem;
+    margin: 1rem;
 }
 
 /*
@@ -39,10 +41,8 @@ h1 {
 .deck {
     width: 660px;
     min-height: 680px;
-    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
-    padding: 32px;
-    border-radius: 10px;
-    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    background: #fff;
+    padding: 16px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -51,11 +51,11 @@ h1 {
 }
 
 .deck .card {
-    height: 125px;
-    width: 125px;
-    background: #2e3d49;
+    height: 135px;
+    width: 135px;
+    background: #000;
     font-size: 0;
-    color: #ffffff;
+    color: #fff;
     border-radius: 8px;
     cursor: pointer;
     display: flex;
@@ -66,18 +66,18 @@ h1 {
 
 .deck .card.open {
     transform: rotateY(0);
-    background: #02b3e4;
+    background: #CC0000;
     cursor: default;
 }
 
 .deck .card.show {
-    font-size: 33px;
+    font-size: 45px;
 }
 
 .deck .card.match {
     cursor: default;
-    background: #02ccba;
-    font-size: 33px;
+    background: #5E5E5E;
+    font-size: 45px;
 }
 
 .deck .card.disable {
