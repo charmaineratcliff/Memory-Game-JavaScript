@@ -103,12 +103,12 @@ function compare(currentCard, previousCard) {
 
   } else {
 
-    // Let's the cards wait 500 ms before doing this
+    // Let's the cards wait 350 ms before doing this
     setTimeout(function() {
       currentCard.classList.remove("open", "show", "disable");
       previousCard.classList.remove("open", "show", "disable");
       openCards = [];
-    }, 500);
+    }, 350);
   }
 
   //Adds a move
@@ -119,6 +119,7 @@ function compare(currentCard, previousCard) {
 function gameOver() {
   if(matchedCards.length === cards.length) {
     alert("Game Over!");
+    stopTimer();
   }
 }
 
