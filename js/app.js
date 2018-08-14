@@ -232,7 +232,21 @@ function youWon() {
 //Play again function for the modal
 function playAgain(){
   modal.classList.remove("show");
+  cardDeck.innerHTML = "";
+
+  // Calls startGame to make new cards
   startGame();
+
+  // Resets any related variables
+  matchedCards = [];
+  moves = 0;
+  movesContainer.innerHTML = moves;
+  starsContainer.innerHTML = star + star + star;
+
+  //Reset timer
+  timer.innerHTML = "00:00:00";
+  stopTimer();
+
 };
 
 
