@@ -20,6 +20,9 @@ let matchedCards = [];
 let second = 0, minute = 0, hour = 0;
 let timer = document.querySelector(".timer");
 
+//Modal variables
+let modal = document.getElementById("modal");
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -118,8 +121,7 @@ function compare(currentCard, previousCard) {
 //Checks if the game is over
 function gameOver() {
   if(matchedCards.length === cards.length) {
-    alert("Game Over!");
-    stopTimer();
+    youWon();
   }
 }
 
@@ -207,6 +209,32 @@ resetButton.addEventListener("click", function() {
   stopTimer();
 
 });
+
+//Modal function
+function youWon() {
+  clearInterval(ticker);
+  totalTime = timer.innerHTML;
+
+  //Show modal
+  modal.classList.add("show");
+
+  let starRating = document.querySelector(".stars").innerHTML;
+
+  //Show move, rating, time
+  document.getElementById("totalMoves").innerHTML = moves+1; //Have to add one as moves returns moves minus one.
+  document.getElementById("starRating").innerHTML = starRating;
+  document.getElementById("totalTime").innerHTML = totalTime;
+
+  stopTimer();
+};
+
+
+//Play again function for the modal
+function playAgain(){
+  modal.classList.remove("show");
+  startGame();
+};
+
 
 //Starts the game the first time
 startGame();

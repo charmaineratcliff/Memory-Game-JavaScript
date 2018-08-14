@@ -36,6 +36,20 @@
 
         <ul class="deck">
         </ul>
+
+        <div id="modal" class="overlay">
+          <div class="modalPopup">
+            <h2>Congratualtions!</h2>
+            <p>You are a wiz!</p>
+            <p>You won in <span id="totalMoves"></span> moves </p>
+            <p> and in <span id=totalTime></span>!</p>
+            <p>Your rating was <span id="starRating"></span></p>
+          </div>
+          <button id="playAgain"onclick="playAgain()">
+            Play Again?
+          </button>
+        </div>
+        
     </div>
 
     <script src="js/app.js"></script>
