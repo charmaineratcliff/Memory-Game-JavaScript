@@ -32,6 +32,7 @@ h1 {
     font-weight: 400;
     font-size: 3.5rem;
     margin: 1rem;
+    text-align: center;
 }
 
 /*
@@ -39,8 +40,7 @@ h1 {
  */
 
 .deck {
-    width: 660px;
-    min-height: 680px;
+    min-height: 400px;
     background: #fff;
     padding: 16px;
     display: flex;
@@ -108,26 +108,20 @@ h1 {
 
 .score-panel {
     text-align: center;
-    width: 680px;
+    width: 600px;
     flex-wrap: wrap;
     display: flex;
+    font-size: 2rem;
 }
 
 .movesContainer, .timer {
   width: 50%;
   font-family: 'Open Sans'; sans-serif;
   font-weight: 300;
-  font-size: 1.5rem;
 }
 
-.starContainer {
+.starContainer, .restart {
   width: 50%;
-  font-size: 2rem;
-}
-
-.restart {
-  width: 50%;
-  font-size: 2rem;
 }
 
 .score-panel .stars {
