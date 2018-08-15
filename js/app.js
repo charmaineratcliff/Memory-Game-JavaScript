@@ -79,7 +79,7 @@ function click(card) {
 
     } else {
       // When you do not have any opened cards
-      currentCard.classList.add("open", "show", "disable", "notmatch");
+      currentCard.classList.add("open", "show", "disable");
       openCards.push(this);
 
     }
@@ -109,7 +109,7 @@ function compare(currentCard, previousCard) {
     currentCard.classList.add("notmatch");
     previousCard.classList.add("notmatch");
 
-    //Waits 800ms before removing the classes.
+    //Wait 800ms before removing the classes.
     setTimeout(function() {
       currentCard.classList.remove("open", "show", "disable", "notmatch");
       previousCard.classList.remove("open", "show", "disable", "notmatch");
@@ -195,6 +195,9 @@ function stopTimer(){
 // Reset button
 const resetButton = document.querySelector(".restart");
 resetButton.addEventListener("click", function() {
+  // Clears the openCards array
+  openCards = [];
+
   // Deletes all cards
   cardDeck.innerHTML = "";
 
@@ -206,6 +209,8 @@ resetButton.addEventListener("click", function() {
   moves = 0;
   movesContainer.innerHTML = moves;
   starsContainer.innerHTML = star + star + star;
+
+
 
   //Reset timer
   timer.innerHTML = "00:00:00";
