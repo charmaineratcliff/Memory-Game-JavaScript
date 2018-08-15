@@ -79,7 +79,7 @@ function click(card) {
 
     } else {
       // When you do not have any opened cards
-      currentCard.classList.add("open", "show", "disable");
+      currentCard.classList.add("open", "show", "disable", "notmatch");
       openCards.push(this);
 
     }
@@ -109,6 +109,7 @@ function compare(currentCard, previousCard) {
     currentCard.classList.add("notmatch");
     previousCard.classList.add("notmatch");
 
+    //Waits 800ms before removing the classes.
     setTimeout(function() {
       currentCard.classList.remove("open", "show", "disable", "notmatch");
       previousCard.classList.remove("open", "show", "disable", "notmatch");
