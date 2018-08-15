@@ -105,13 +105,15 @@ function compare(currentCard, previousCard) {
     gameOver();
 
   } else {
+    //Not a match
+    currentCard.classList.add("notmatch");
+    previousCard.classList.add("notmatch");
 
-    // Let's the cards wait 500 ms before doing this
     setTimeout(function() {
-      currentCard.classList.remove("open", "show", "disable");
-      previousCard.classList.remove("open", "show", "disable");
+      currentCard.classList.remove("open", "show", "disable", "notmatch");
+      previousCard.classList.remove("open", "show", "disable", "notmatch");
       openCards = [];
-    }, 500);
+    }, 800);
   }
 
   //Adds a move
