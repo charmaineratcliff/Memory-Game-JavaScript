@@ -17,7 +17,7 @@ let matchedCards = [];
 
 //Timer variables
 
-let second = 0, minute = 0, hour = 0;
+let second = 0, minute = 0;
 let timer = document.querySelector(".timer");
 
 //Modal variables
@@ -56,9 +56,7 @@ function startGame(){
   // Reset Timer
   second = 0;
   minute = 0;
-  hour = 0;
-  timer.innerHTML = "00:00:00";
-  clearInterval(ticker);
+  timer.innerHTML = "00:00";
 }
 
 // Card being clicked event
@@ -148,7 +146,6 @@ function addMoves() {
   if (moves === 1) {
     second = 0;
     minute = 0;
-    hour = 0;
     startTimer();
   }
   //Checks and sets the rating
@@ -183,15 +180,11 @@ function rating () {
 
 function startTimer(){
   ticker = setInterval(function(){
-    timer.innerHTML = hour + ":" + minute + ":" + second;
+    timer.innerHTML = minute + ":" + second;
     second++;
     if(second == 60) {
       minute++;
       second=0;
-    }
-    if(minute == 60) {
-      hour++;
-      minute = 0;
     }
   }, 1000);
 };
@@ -221,7 +214,7 @@ resetButton.addEventListener("click", function() {
 
 
   //Reset timer
-  timer.innerHTML = "00:00:00";
+  timer.innerHTML = "00:00";
   stopTimer();
 
 });
@@ -260,7 +253,7 @@ function playAgain(){
   starsContainer.innerHTML = star + star + star;
 
   //Reset timer
-  timer.innerHTML = "00:00:00";
+  timer.innerHTML = "00:00";
   stopTimer();
 };
 
