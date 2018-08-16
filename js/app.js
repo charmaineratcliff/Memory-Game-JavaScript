@@ -33,8 +33,7 @@ function shuffle(array) {
         temporaryValue = array[currentIndex];
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;
-    }
-
+    };
     return array;
 }
 
@@ -77,11 +76,11 @@ function click(card) {
 
       compare(currentCard, previousCard);
 
+
     } else {
       // When you do not have any opened cards
       currentCard.classList.add("open", "show", "disable");
       openCards.push(this);
-
     }
 
   });
@@ -90,9 +89,11 @@ function click(card) {
 //Compares the 2 opened cards
 function compare(currentCard, previousCard) {
 
+  //Pointer event to stop overclicking issue
+  cardDeck.style.pointerEvents = "none";
+
   //Matches
   if(currentCard.innerHTML === previousCard.innerHTML) {
-
     //Match
     currentCard.classList.add("match");
     previousCard.classList.add("match");
@@ -109,16 +110,23 @@ function compare(currentCard, previousCard) {
     currentCard.classList.add("notmatch");
     previousCard.classList.add("notmatch");
 
-    //Wait 800ms before removing the classes.
+    //Wait 500ms before removing the classes.
     setTimeout(function() {
       currentCard.classList.remove("open", "show", "disable", "notmatch");
       previousCard.classList.remove("open", "show", "disable", "notmatch");
       openCards = [];
-    }, 800);
-  }
 
+      //Pointer event to stop overclicking issue
+      //cardDeck.style.pointerEvents = "auto";
+    }, 500);
+  }
   //Adds a move
   addMoves();
+
+  setTimeout(function() {
+    //Pointer event to stop overclicking issue
+    cardDeck.style.pointerEvents = "auto";
+  }, 500);
 }
 
 //Checks if the game is over

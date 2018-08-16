@@ -56,12 +56,11 @@ h1 {
     background: #000;
     font-size: 0;
     color: #fff;
-    border-radius: 8px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 60, 0.5);
 }
 
 .deck .card.open {
